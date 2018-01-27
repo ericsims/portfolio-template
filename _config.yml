@@ -8,6 +8,7 @@ copyright: 2018
 collections:
   projects:
     output: true
+    layout: project
     permalink: /projects/:path/
 
 defaults:
@@ -16,8 +17,4 @@ defaults:
       path: "" # an empty string here means all files in the project
     values:
       layout: "basic"
-  -
-    scope:
-      path: "projects"
-    values:
-      layout: "project"
+
