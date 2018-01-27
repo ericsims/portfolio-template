@@ -1,12 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
 @import url(https://fonts.googleapis.com/css?family=Josefin+Sans);
 
+/* Color Variables */
+:root {
+  --bgcolor: #CAD0D2;
+  --fontcolor: #302E2F;
+  --accent1: #7289ac;
+  --accent2: #bf7d5d;
+  --accent3: #ab4326;
+
+  --titlefont: 'Josefin Sans';
+  --bodyfont: 'Cutive Mono';
+
+}
+
+
 body {
-  background-color: #302E2F;
-  color: #CAD0D2;
+  background-color: var(--bgcolor);
+  color: var(--fontcolor);
   margin: 0;
   font-size: 20px;
-  font-family: 'Cutive Mono', sans-serif;
+  font-family: var(--bodyfont), sans-serif;
 }
 
 #content {
@@ -23,7 +37,8 @@ body {
 }
 
 a {
-  color: #7289ac;
+  color: var(--accent1);
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -34,27 +49,27 @@ div#title {
   top: 0;
   padding: 2vh 1vw;
 
-  background-color: #7289ac;
-  border-bottom: solid 1vh #bf7d5d;
-  box-shadow: 0 0 0 1vh #ab4326,
-              -10px 4vh 40px -12px black;
-  -moz-box-shadow: 0 0 0 1vh #ab4326,
-                  -10px 4vh 40px -12px black;
-  -webkit-box-shadow: 0 0 0 1vh #ab4326,
-                     -10px 4vh 40px -12px black;
+  background-color: var(--accent1);
+  border-bottom: solid 1vh var(--accent2);
+  box-shadow: 0 0 0 1vh var(--accent3),
+              -10px 4vh 40px -20px var(--fontcolor);
+  -moz-box-shadow: 0 0 0 1vh var(--accent3),
+                  -10px 4vh 40px -20px var(--fontcolor);
+  -webkit-box-shadow: 0 0 0 1vh var(--accent3),
+                     -10px 4vh 50px -20px var(--fontcolor);
 }
 
 div#title a{
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: var(--titlefont), sans-serif;
+  font-weight:normal;
   text-decoration: none;
-  color: #CAD0D2;
+  color: var(--bgcolor);
   font-size: 10vh;
   display: flex;
   justify-content: center;
 }
 
-.gray-dotted li {
-  border-top: dotted .5vh #CAD0D2;
+li {
   background-color: rgba(255, 255, 255, 0.15);
   -webkit-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
   -moz-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
@@ -72,8 +87,8 @@ li.project {
   list-style-type: none;
   overflow: hidden;
   margin: 1rem;
-  width: 12vmax;
-  height: 12vmax;
+  width: 25vmax;
+  height: 25vmax;
   min-width: 75px;
   min-height: 75px;
   text-align: center;
@@ -82,8 +97,7 @@ li.project {
 }
 
 .project-title {
-  font-size: calc(8px + 1vmax);
-  color: #ebe8e6;
+  color: var(--bgcolor);
   display: block;
   width: 100%;
   height: 100%;
@@ -91,11 +105,20 @@ li.project {
 }
 
 .project-title p {
-  top: 6vmax;
+  font-size: calc(8px + 1vmax);
+  margin-top: 0;
   padding: 1vh 1vw;
   background-color: rgba(0, 0, 0, 0.7);
+  max-height: 1em;
+  transition: max-height 3s ease-out-in;
+
 }
 
 .project-title:hover p {
   background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  max-height: 10000px;
+  transition: max-height 3s ease-in;
+
+
 }
