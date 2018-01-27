@@ -1,10 +1,15 @@
 ---
 title: Candlefinder
 project: candlefinder
+layout: project
 published: true
 completed: false
-keywords: {Robotics, ROS, Pathfinding, CAD}
+keywords:
+  - one
+  - two
+  - three
 ---
+
 
 ## About
 Candlefinder is a robot that was built to compete in the 2017 [Trinity College Fire Fighting Home Robot Competition](http://www.trincoll.edu/events/robot/).
