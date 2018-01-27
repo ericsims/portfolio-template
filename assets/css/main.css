@@ -69,18 +69,18 @@ div#title a{
   justify-content: center;
 }
 
-li {
-  background-color: rgba(255, 255, 255, 0.15);
-  -webkit-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
-  -moz-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
-  box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
-}
-
 #project-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+}
+
+#project-container li {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
+  -moz-box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
+  box-shadow: 4px 4px 15px 3px rgba(0,0,0,0.5);
 }
 
 li.project {

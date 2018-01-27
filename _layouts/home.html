@@ -8,7 +8,7 @@
     {{ content }}
     </div>
     {% if site.projects.size > 0 %}
-    <ul id="project-container" class="gray-dotted">
+    <ul id="project-container">
       {% for project in site.projects %}
         <li class="project" style="background-image:url({{ site.url }}/assets/thumb/{{project.project}}.png)">
           <a class="project-title" href="{{ project.url }}"><p>{{ project.title }}</p></a>
